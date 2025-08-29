@@ -15,5 +15,9 @@
   "dependencies": {
     "normalize.css": "^8.0.1",
     "sakura.css": "^1.5.1"
+  },
+  "scripts": {
+    "serve": "bun run --hot src/js/server.js",
+    "build": "bun build.js"
   }
 }
