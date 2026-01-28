@@ -118,16 +118,16 @@ class Piece {
   constructor(shape) {
     this.index = 0
     this.shape = shape
-    this.rotations = TETROMINOS[shape]
+    this.rotations = T[shape]
   }
   getShape() {
     return this.rotations[this.index]
   }
   rotateCW() {
-    this.index = (this.index + 1) % this.rotations.length;
+    this.index = Math.abs((this.index + 1) % this.rotations.length);
   }
   rotateCCW() {
-    this.index = (this.index - 1) % this.rotations.length;
+    this.index = Math.abs((this.index - 1) % this.rotations.length);
   }
   render() {
     console.log("TODO")
