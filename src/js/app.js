@@ -9,15 +9,8 @@ document.onreadystatechange = () => {
     let config = {
       type: Phaser.CANVAS,
       width: 160,
-      height: 140,
+      height: 144,
       scene: [Intro, MainMenu, GameScene],
-      physics: {
-        // default: "arcade",
-        // arcade: {
-        //   gravity: { y: 300 },
-        //   debug: false
-        // }
-      },
       scale: {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH
