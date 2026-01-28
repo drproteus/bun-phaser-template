@@ -1,12 +1,7 @@
-# Bun Web App Template
+# Bun Phaser Template
 
 ## Includes
-* Backbone
-* lodash
-* jQuery
-* Normalize CSS
-* Sakura CSS
-* EB Garamond Font
+* Phaser 3
 
 ## Setup
 
@@ -30,10 +25,8 @@ Defaults to http://localhost:3000.
 * `dist/index.html`: Main static entry page.
 * `src/js/app.js`: Main app script.
 * `src/css/main.css`: Custom CSS.
-* `src/js/server.js`: Development server for static files and demo API.
 
 ## Demo
 
-Use the arrow keys to navigate the cat.
+<img width="1200" height="900" alt="image" src="https://github.com/user-attachments/assets/99872a88-c401-42f6-9b1c-c539673d7ed9" />
 
-![bun-demo](https://github.com/user-attachments/assets/5210b62f-00e3-4017-8431-5ffc34de414f)
