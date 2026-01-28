@@ -1,29 +1,10 @@
-@font-face {
-    font-family: "Garamond";
-    src: url("../fonts/EBGaramond.ttf");
-}
-
 html {
     background: black;
 }
 
-body * {
-    font-family: "Garamond" !important;
-    background: black;
-}
-
-h1 {
-    color: #eee;
-    text-shadow: 5px 5px rgba(0, 0, 0, 0.3);
-}
-
-#main {
-    width: 800px;
-    height: 600px;
-    border: 1px solid white;
-    margin: auto;
-}
-
-#screenCanvas {
-    margin: auto;
+html,
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
 }

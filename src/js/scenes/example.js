@@ -77,6 +77,15 @@ class Example extends Phaser.Scene {
     this.bombs = this.physics.add.group()
     this.physics.add.collider(this.bombs, this.platforms);
     this.physics.add.collider(this.player, this.bombs, this.hitBomb, null, this);
+
+    this.toggleFullscreen = this.input.keyboard.addKey("F");
+    this.toggleFullscreen.on("down", (event) => {
+      if (this.scale.isFullscreen) {
+        this.scale.stopFullscreen();
+      } else {
+        this.scale.startFullscreen();
+      }
+    });
   }
 
   collectStar(player, star) {
