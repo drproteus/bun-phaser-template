@@ -8,16 +8,16 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "backbone": "^1.6.1",
-    "jquery": "^3.7.1",
+    "phaser": "^3.90.0",
     "lodash": "^4.17.21"
   },
   "dependencies": {
+    "http-server": "^14.1.1",
     "normalize.css": "^8.0.1",
     "sakura.css": "^1.5.1"
   },
   "scripts": {
-    "serve": "bun run --hot src/js/server.js",
+    "serve": "bun run http-server dist",
     "build": "bun build.js"
   }
 }
