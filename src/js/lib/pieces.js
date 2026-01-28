@@ -124,13 +124,68 @@ class Piece {
     return this.rotations[this.index]
   }
   rotateCW() {
-    this.index = Math.abs((this.index + 1) % this.rotations.length);
+    this.index = Math.abs((this.index + 1)) % this.rotations.length;
   }
   rotateCCW() {
-    this.index = Math.abs((this.index - 1) % this.rotations.length);
+    this.index = Math.abs((this.index - 1)) % this.rotations.length;
+  }
+  getTilemapIndex(x, y) {
+    if (this.getShape()[y][x] == 0) {
+      return -1
+    }
+    if (this.shape !== "i") {
+      switch (this.shape) {
+        case "o":
+          return 5
+        case "j":
+          return 6
+        case "l":
+          return 9
+        case "s":
+          return 8
+        case "t":
+          return 6
+        case "z":
+          return 10
+      }
+    } else {
+      if (this.index == 0) {
+        // Horizontal
+        switch (x) {
+          case 0:
+            return 0
+          case 1:
+            return 1
+          case 2:
+            return 1
+          case 3:
+            return 2
+        }
+      } else {
+        // Vertical
+        switch (y) {
+          case 0:
+            return 3
+          case 1:
+            return 7
+          case 2:
+            return 7
+          case 3:
+            return 11
+        }
+      }
+    }
   }
   render() {
-    console.log("TODO")
+    let s = this.getShape()
+    // Copy the rotation so we're not editing it directly.
+    let r = s.slice().map((arr) => arr.slice())
+    for (let i = 0; i < r.length; i++) {
+      for (let j = 0; j < r[0].length; j++) {
+        r[i][j] = this.getTilemapIndex(j, i)
+      }
+    }
+    return r;
   }
 }
 
