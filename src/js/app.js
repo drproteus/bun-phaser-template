@@ -1,6 +1,7 @@
 import Phaser from "phaser";
 import { Intro } from "./scenes/intro";
 import { MainMenu } from "./scenes/menu";
+import { GameScene } from "./scenes/game"
 
 // Setup
 document.onreadystatechange = () => {
@@ -9,7 +10,7 @@ document.onreadystatechange = () => {
       type: Phaser.CANVAS,
       width: 160,
       height: 140,
-      scene: [Intro, MainMenu],
+      scene: [Intro, MainMenu, GameScene],
       physics: {
         // default: "arcade",
         // arcade: {
